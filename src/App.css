@@ -1,0 +1,37 @@
+.app {
+    background-color: var(--primary);
+    overflow: hidden scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.page-title {
+    font-family: 'DM Serif Text', serif;
+    font-weight: 100;
+    color: var(--text);
+    font-size: 6vw;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+}
+
+.page-title:hover {
+    cursor: default;
+}
+
+img {
+    width: 100%;
+    max-width: max-content;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        margin-top: 1rem;
+    }
+}
