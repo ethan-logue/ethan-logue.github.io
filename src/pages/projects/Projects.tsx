@@ -7,13 +7,22 @@ const Projects: React.FC = () => {
 
 	const projects: ProjectItemProps[] = [
 		{
+			name: 'iSchool Web App',
+			description: 'Created a React web app using Vite and pulled data from an API to create a homepage for my classes\' department. I used ChakraUI components to neatly display the information and CSS to follow RIT branding using their web style guide.',
+			tag: '2023 / Class Project',
+			image: './images/ischool.jpg',
+			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
+			link: 'https://people.rit.edu/~eml8469/ISTE340/react/logue-project/',
+			d: .2,
+		},
+		{
 			name: 'TechNet',
 			description: 'With a team of 4, we transformed an old static internal site into a dynamic React web app. I converted several pages from JavaScript to TypeScript and was in charge of implementing the redesigns from Figma and maintaining responsiveness. I utilized Framer Motion to create fluid interactablilty.',
 			tag: '2023 / Team Project',
 			image: './images/technet.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML', 'Figma'],
 			link: 'https://technet.rit.edu/',
-			d: .2,
+			d: .3,
 		},
 		{
 			name: 'Portfolio',
@@ -22,7 +31,7 @@ const Projects: React.FC = () => {
 			image: './images/portfolio.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
 			link: 'https://ethan-logue.github.io/',
-			d: .3,
+			d: .4,
 		},
 		{
 			name: 'Travel Site',
@@ -31,7 +40,7 @@ const Projects: React.FC = () => {
 			image: './images/travel-site.jpg',
 			techStack: ['JavaScript', 'CSS', 'HTML', 'PHP'],
 			link: 'https://people.rit.edu/~eml8469/ISTE240/final/index.php',
-			d: .4,
+			d: .5,
 		},
 		{
 			name: 'Video Portfolio',
@@ -40,7 +49,7 @@ const Projects: React.FC = () => {
 			image: './images/video-portfolio.jpg',
 			techStack: ['CSS', 'HTML'],
 			link: 'https://people.rit.edu/~eml8469/iste140/Roblox%20Application/',
-			d: .5,
+			d: .6,
 		},
 	];
 
