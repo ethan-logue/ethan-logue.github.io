@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiExternalLink } from 'react-icons/fi';
+import { PiCodeBlockBold } from 'react-icons/pi';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -9,11 +10,12 @@ export interface ProjectItemProps {
     tag: string;
     image: string;
     techStack: string[];
-    link: string;
+    sourceLink?: string;
+    liveLink: string;
     d: number;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image, techStack, link, d }) => {
+const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image, techStack, sourceLink, liveLink, d }) => {
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -51,16 +53,29 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, tag, image
                         <h3 className='project-title'>{name}</h3>
                         <p className='project-tag'>{tag}</p>
                     </span>
-                    <motion.a
-                        className='project-link'
-                        href={link}
-                        target='_blank'
-                        whileHover={{ scale: 1.25 }}
-                        whileTap={{ scale: 1.0 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                    >
-                        <FiExternalLink />
-                    </motion.a>
+                    <span>
+                        {sourceLink ? ( 
+                        <motion.a
+                            className='project-link project-src-link'
+                            href={sourceLink}
+                            target='_blank'
+                            whileHover={{ scale: 1.25 }}
+                            whileTap={{ scale: 1.0 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                        >
+                            <PiCodeBlockBold />
+                        </motion.a>) : null}
+                        <motion.a
+                            className='project-link'
+                            href={liveLink}
+                            target='_blank'
+                            whileHover={{ scale: 1.25 }}
+                            whileTap={{ scale: 1.0 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                        >
+                            <FiExternalLink />
+                        </motion.a>
+                    </span>
                 </div>
                 <p className='project-description'>{description}</p>
                 <ul className='tech-stack'>

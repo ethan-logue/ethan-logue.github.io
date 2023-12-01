@@ -12,7 +12,8 @@ const Projects: React.FC = () => {
 			tag: '2023 / Class Project',
 			image: './images/ischool.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
-			link: 'https://people.rit.edu/~eml8469/ISTE340/react/logue-project/',
+			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/ischool-web-app',
+			liveLink: 'https://people.rit.edu/~eml8469/ISTE340/react/logue-project/',
 			d: .2,
 		},
 		{
@@ -21,7 +22,7 @@ const Projects: React.FC = () => {
 			tag: '2023 / Team Project',
 			image: './images/technet.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML', 'Figma'],
-			link: 'https://technet.rit.edu/',
+			liveLink: 'https://technet.rit.edu/',
 			d: .3,
 		},
 		{
@@ -30,7 +31,8 @@ const Projects: React.FC = () => {
 			tag: '2023 / Personal Project',
 			image: './images/portfolio.jpg',
 			techStack: ['React', 'TypeScript', 'CSS', 'HTML'],
-			link: 'https://ethan-logue.github.io/',
+			sourceLink: 'https://github.com/ethan-logue/ethan-logue.github.io',
+			liveLink: 'https://ethan-logue.github.io/',
 			d: .4,
 		},
 		{
@@ -39,7 +41,8 @@ const Projects: React.FC = () => {
 			tag: '2023 / Class Project',
 			image: './images/travel-site.jpg',
 			techStack: ['JavaScript', 'CSS', 'HTML', 'PHP'],
-			link: 'https://people.rit.edu/~eml8469/ISTE240/final/index.php',
+			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/travel-site',
+			liveLink: 'https://people.rit.edu/~eml8469/ISTE240/final/index.php',
 			d: .5,
 		},
 		{
@@ -48,7 +51,8 @@ const Projects: React.FC = () => {
 			tag: '2022 / Personal Project',
 			image: './images/video-portfolio.jpg',
 			techStack: ['CSS', 'HTML'],
-			link: 'https://people.rit.edu/~eml8469/iste140/Roblox%20Application/',
+			sourceLink: 'https://github.com/ethan-logue/projects-src-code/tree/main/video-portfolio',
+			liveLink: 'https://people.rit.edu/~eml8469/iste140/Roblox%20Application/',
 			d: .6,
 		},
 	];
