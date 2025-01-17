@@ -17,3 +17,8 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
 - [x] Cursor stays on page when mouse leaves viewport
 - [x] Custom cursor appears on mobile when clicking
 - [ ] FlowerScene is not effected by light properly
+
+## Ideas
+- New nav design
+- Project grid layout
+- Routing for individual project pages
