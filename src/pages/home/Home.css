@@ -13,6 +13,7 @@
 .home-code-container {
     transform-style: preserve-3d;
     width: fit-content;
+    position: relative;
 }
 
 .home-three-container {

@@ -62,7 +62,7 @@ const Home: React.FC = () => {
                     <CodeWindow codeString={codeData.codeString} classes='home-code' />
                 </div>
                 <div className='home-three-container'>
-                    <FlowerScene />
+                    {/* <FlowerScene /> */}
                 </div>
             </div>
         </div>
