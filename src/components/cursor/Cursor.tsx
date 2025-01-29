@@ -9,8 +9,9 @@ const Cursor = () => {
 
     useEffect(() => {
         const checkIfMobile = () => {
-            const isMobileDevice = window.matchMedia("(pointer: coarse)").matches;
-            setIsMobile(isMobileDevice);
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const isSmallScreen = window.innerWidth <= 768;
+            setIsMobile(isTouchDevice && isSmallScreen);
         };
 
         checkIfMobile();
