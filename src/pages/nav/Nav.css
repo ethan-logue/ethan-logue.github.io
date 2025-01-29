@@ -13,6 +13,7 @@
     border-radius: 8px;
     backdrop-filter: blur(3px);
     z-index: 999;
+    perspective: 500px;
 }
 
 .nav-links {
@@ -41,3 +42,28 @@
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 44px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    transition: transform 0.3s;
+}
+
+.face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 44px;
+    padding-left: 1rem;
+}
+
+.front  { transform: translateZ(22px); }
+.bottom { transform: rotateX(-90deg) translateZ(22px); }
+.back   { transform: rotateX(180deg) translateZ(22px); }
+.top    { transform: rotateX(90deg) translateZ(22px); }
