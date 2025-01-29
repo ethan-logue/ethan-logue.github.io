@@ -27,15 +27,43 @@
 .nav-link a {
     text-decoration: none;
     color: var(--text);
-    padding: 0.5rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.nav-link a:hover {
-    background-color: var(--accent-lightblue);
+.nav-link span {
+    opacity: 1;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.nav-link a::after {
     border-radius: 4px;
+    content: '';
+    transition: all 0.3s ease;
+}
+
+.nav-link:not(.active) a:hover::after {
+    background-color: var(--accent-lightblue);
     color: var(--background);
+}
+
+.nav-link.active a {
+    color: var(--accent-lightblue);
+}
+
+.nav-container:hover .nav-link span {
+    opacity: 0;
+}
+
+.nav-container:hover .nav-link a::after {
+    content: attr(data-section);
+    margin-left: -10px;
+    padding: 0.5rem;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-title {

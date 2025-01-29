@@ -16,7 +16,8 @@ This branch is where I'm working on a new version of my site incorporating GSAP 
 ## Bugs
 - [x] Cursor stays on page when mouse leaves viewport
 - [x] Custom cursor appears on mobile when clicking
-- [ ] FlowerScene is not effected by light properly
+- ~~[ ] FlowerScene is not effected by light properly~~
+- [ ] Nav heading flips weird when going from index 0 to 3 and vice versa
 
 ## Ideas
 - New nav design

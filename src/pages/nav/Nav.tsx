@@ -5,14 +5,14 @@ import './Nav.css';
 
 const Nav: React.FC = () => {
     const cursorHandlers = useCursorHandlers();
-    const [activeSection, setActiveSection] = useState<string>('Ethan Logue');
+    const [activeSection, setActiveSection] = useState<string>('Home');
 
-    const sections = ['Home', 'About', 'Projects', 'Contact'];
+    const sections = React.useMemo(() => ['Home', 'About', 'Projects', 'Contact'], []);
 
     useEffect(() => {
-        const index = sections.indexOf(activeSection === 'Ethan Logue' ? 'Home' : activeSection);
-        gsap.to('.cube', { rotationX: index * 90, duration: 0.3 });
-    }, [activeSection]);
+        const index = sections.indexOf(activeSection);
+        gsap.to('.cube', { rotationX: index * 90, duration: 0.3, ease: 'power2.inOut' });
+    }, [activeSection, sections]);
 
     return (
         <nav className='nav-container'>
@@ -23,16 +23,19 @@ const Nav: React.FC = () => {
                 <div className='face top'>Contact</div>
             </h1>
             <ul className='nav-links'>
-                {sections.map((section) => (
-                    <li
-                        key={section}
-                        className={`nav-link ${section === activeSection ? 'active' : ''}`}
-                        {...cursorHandlers}
-                        onClick={() => setActiveSection(section === 'Home' ? 'Ethan Logue' : section)}
-                    >
-                        <a href={`#${section}`}>{section}</a>
-                    </li>
-                ))}
+                {sections.map((section) => {
+                    const handlers = section !== activeSection ? cursorHandlers : {};
+                    return (
+                        <li
+                            key={section}
+                            className={`nav-link ${section === activeSection ? 'active' : ''}`}
+                            {...handlers}
+                            onClick={() => setActiveSection(section)}
+                        >
+                            <a href={`#${section}`} data-section={section}><span>&#9679;</span></a>
+                        </li>
+                    );
+                })}
             </ul>
         </nav>
     );
